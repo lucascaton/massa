@@ -1,0 +1,29 @@
+- :description: 'Rubocop'
+  :gem_name:    'rubocop'
+  :command:     'bundle exec rubocop'
+  :required:    true
+
+- :description: 'Brakeman'
+  :gem_name:    'brakeman'
+  :command:     'bundle exec brakeman -Aqz'
+  :required:    true
+
+- :description: 'Rails Best Practices'
+  :gem_name:    'rails_best_practices'
+  :command:     'bundle exec rails_best_practices'
+  :required:    true
+
+- :description: 'HAML lint'
+  :gem_name:    'haml-lint'
+  :command:     'bundle exec haml-lint app/views'
+  :required:    true
+
+- :description: 'I18n translations'
+  :gem_name:    'i18n-tasks'
+  :command:     'bundle exec i18n-tasks missing'
+  :required:    false
+
+- :description: 'RSpec'
+  :gem_name:    'rspec'
+  :command:     'RAILS_ENV=test bundle exec rspec'
+  :required:    true
