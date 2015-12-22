@@ -26,10 +26,14 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.md",
     "Rakefile",
-    "VERSION",
+    "bin/massa",
     "lib/massa.rb",
+    "lib/massa/analyzer.rb",
+    "lib/massa/cli.rb",
+    "lib/massa/default_tools.yml",
+    "lib/massa/tool.rb",
     "lib/massa/version.rb",
-    "massa.gemspec",
+    "massa.gemspec"
   ]
   s.homepage = "http://github.com/lucascaton/massa"
   s.licenses = ["MIT"]
@@ -40,17 +44,18 @@ Gem::Specification.new do |s|
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<bundler>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<pry>, [">= 0"])
-      s.add_development_dependency(%q<rspec>, [">= 0"])
     else
+      s.add_dependency(%q<bundler>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<pry>, [">= 0"])
-      s.add_dependency(%q<rspec>, [">= 0"])
     end
   else
+    s.add_dependency(%q<bundler>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<pry>, [">= 0"])
-    s.add_dependency(%q<rspec>, [">= 0"])
   end
 end
+
