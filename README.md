@@ -30,4 +30,4 @@ cherry-pick around it.
 
 ## Copyright
 
-Copyright (c) 2015 Lucas Caton. See LICENSE.txt for further details.
+Copyright (c) 2016 Lucas Caton. See LICENSE.txt for further details.
