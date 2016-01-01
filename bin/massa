@@ -6,14 +6,20 @@ $LOAD_PATH.push File.expand_path('../../lib', __FILE__)
 options = {}
 
 OptionParser.new do |opts|
-  opts.banner = 'Usage: massa [options]' # \n\nYou can use flags as such:'
+  opts.banner = 'Usage: massa [options]'
 
-  opts.on('-h', '--help', 'Display this screen') do
+  opts.on('-h', '--help', 'Display this help') do
     puts opts
     exit
   end
 
-  opts.on('-v', '--verbose', 'Run verbosely') do |v|
+  opts.on('-v', '--version', 'Display version') do |v|
+    require 'massa/version'
+    puts Massa::VERSION
+    exit
+  end
+
+  opts.on('-V', '--verbose', 'Run verbosely') do |v|
     options[:verbose] = v
   end
 end.parse!
