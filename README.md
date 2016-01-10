@@ -5,7 +5,18 @@
 [![Coverage Status](https://img.shields.io/codeclimate/coverage/github/lucascaton/massa.svg)](https://codeclimate.com/github/lucascaton/massa)
 [![Code Climate](https://codeclimate.com/github/lucascaton/massa/badges/gpa.svg)](https://codeclimate.com/github/lucascaton/massa)
 
-Keep the quality, good practices and security of Rails projects.
+It's common to see Rails projects becomming hard to maintain and less fun after a while.
+This gem helps you to keep its quality, good practices and security.
+
+## Getting Started
+
+Massa is distributed as a gem, which is how it should be used in your app.
+
+Include the gem in your `Gemfile`:
+
+    group :development, :test do
+      gem 'massa'
+    end
 
 ## About the gem name
 
