@@ -24,6 +24,6 @@
   :required:    false
 
 - :description: 'RSpec'
-  :gem_name:    'rspec'
+  :gem_name:    'rspec-rails'
   :command:     'RAILS_ENV=test bundle exec rspec'
   :required:    true
