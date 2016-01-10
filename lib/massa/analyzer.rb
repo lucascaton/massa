@@ -28,7 +28,7 @@ module Massa
     end
 
     def gem_installed?(name, required:)
-      return true if Bundler.require.map(&:name).include?(name)
+      return true if `gem query -i #{name}`.chomp == 'true'
 
       Massa::CLI.colorize :yellow, "༼ つ ◕_◕ ༽つ '#{name}' is not installed"
 
