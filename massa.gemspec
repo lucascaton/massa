@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Lucas Caton"]
-  s.date = "2016-01-01"
+  s.date = "2016-01-10"
   s.description = "Keep the quality, good practices and security of Rails projects."
   s.executables = ["massa"]
   s.extra_rdoc_files = [
@@ -33,7 +33,9 @@ Gem::Specification.new do |s|
     "lib/massa/default_tools.yml",
     "lib/massa/tool.rb",
     "lib/massa/version.rb",
-    "massa.gemspec"
+    "massa.gemspec",
+    "spec/bin/massa_spec.rb",
+    "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/lucascaton/massa"
   s.licenses = ["MIT"]
@@ -47,15 +49,18 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<bundler>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<pry>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
     else
       s.add_dependency(%q<bundler>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<pry>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
     end
   else
     s.add_dependency(%q<bundler>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<pry>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
   end
 end
 
