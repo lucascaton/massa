@@ -1,13 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'bundler'
-
-group :development do
-  gem 'jeweler'
-  gem 'pry'
-  # gem 'simplecov'
-end
-
-group :development, :test do
-  gem 'rspec'
-end
+# Specify your gem's dependencies in massa.gemspec
+gemspec
