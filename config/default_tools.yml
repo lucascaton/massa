@@ -14,7 +14,7 @@
   :required:    true
 
 - :description: 'HAML lint'
-  :gem_name:    'haml-lint'
+  :gem_name:    'haml_lint'
   :command:     'bundle exec haml-lint app/views'
   :required:    true
 
