@@ -46,7 +46,7 @@ module Massa
 
       unless $?.success?
         Massa::CLI.colorize :red, "¯\\_(ツ)_/¯ #{tool.description} failed."
-        puts command_output if command_output.present?
+        puts command_output if command_output.to_s != ''
 
         exit 1 if tool.required
       end
