@@ -1,6 +1,7 @@
 require 'bundler/setup' # Set up gems listed in the Gemfile.
 require 'ostruct'
 require 'yaml'
+require 'English'
 
 module Massa
   class Analyzier
