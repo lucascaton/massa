@@ -1,6 +1,5 @@
 # Massa
 
-
 [![Gem Version](https://badge.fury.io/rb/massa.svg)](https://rubygems.org/gems/massa)
 [![Build Status](https://travis-ci.org/lucascaton/massa.svg?branch=master)](https://travis-ci.org/lucascaton/massa)
 [![Coverage Status](https://img.shields.io/codeclimate/coverage/github/lucascaton/massa.svg)](https://codeclimate.com/github/lucascaton/massa)
