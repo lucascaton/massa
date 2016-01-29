@@ -8,8 +8,7 @@ RSpec.describe 'bin/massa' do
         expect(output).to eql("Usage: massa [options]
     -h, --help                       Display this help
     -v, --version                    Display version
-    -V, --verbose                    Run verbosely
-        --check-ruby-version         Check if Ruby is outdated")
+    -V, --verbose                    Run verbosely")
       end
     end
   end
