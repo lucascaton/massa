@@ -1,17 +1,13 @@
 module Massa
   class CLI
-    def self.colorize(color, string)
-      color_code = case color
-         when :red        then 31
-         when :green      then 32
-         when :yellow     then 33
-         when :blue       then 34
-         when :pink       then 35
-         when :light_blue then 36
-         else 0
-       end
+    class << self
+      def colorize(color, string)
+        puts "\n\e[#{code(color)}m#{string}\e[0m\n"
+      end
 
-      puts "\n\e[#{color_code}m#{string}\e[0m\n"
+      def code(color)
+        { red: 31, green: 32, yellow: 33, blue: 34, pink: 35, light_blue: 36 }[color] || 0
+      end
     end
   end
 end

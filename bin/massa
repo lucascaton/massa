@@ -13,7 +13,7 @@ OptionParser.new do |opts|
     exit
   end
 
-  opts.on('-v', '--version', 'Display version') do |v|
+  opts.on('-v', '--version', 'Display version') do
     require 'massa/version'
     puts Massa::VERSION
     exit

@@ -5,7 +5,7 @@ require 'yaml'
 module Massa
   class Analyzier
     attr_reader :verbose
-    alias :verbose? :verbose
+    alias verbose? verbose
 
     def self.run!(options)
       new(options).run!
@@ -44,7 +44,7 @@ module Massa
         IO.popen(tool.command, err: [:child, :out]) { |io| command_output = io.read }
       end
 
-      unless $?.success?
+      unless $CHILD_STATUS.success?
         Massa::CLI.colorize :red, "¯\\_(ツ)_/¯ #{tool.description} failed."
         puts command_output if command_output.to_s != ''
 
