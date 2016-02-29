@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Massa
   class Tool
     class << self

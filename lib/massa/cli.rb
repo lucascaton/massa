@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Massa
   class CLI
     class << self
