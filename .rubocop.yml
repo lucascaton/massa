@@ -20,3 +20,6 @@ Style/Documentation:
 RSpec/DescribeClass:
   Exclude:
     - 'spec/bin/**/*'
+
+Metrics/AbcSize:
+  Max: 25
