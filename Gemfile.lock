@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    massa (0.0.7)
+    massa (0.0.8)
 
 GEM
   remote: https://rubygems.org/
