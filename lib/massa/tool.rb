@@ -9,9 +9,6 @@ module Massa
 
       def tools_yaml_file
         "#{Gem::Specification.find_by_name('massa').gem_dir}/config/default_tools.yml"
-      rescue Gem::LoadError
-        Massa::CLI.colorize :red, "¯\\_(ツ)_/¯ 'massa' gem is not in your Gemfile."
-        exit 1
       end
     end
   end

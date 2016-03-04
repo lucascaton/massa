@@ -26,4 +26,10 @@ OptionParser.new do |opts|
 end.parse!
 
 require 'massa'
-Massa::Analyzier.run!(options)
+
+begin
+  Massa::Analyzier.run!(options)
+rescue Gem::LoadError
+  Massa::CLI.colorize :red, "¯\\_(ツ)_/¯ 'massa' gem is not in your Gemfile."
+  exit 1
+end
