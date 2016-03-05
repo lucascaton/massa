@@ -1,4 +1,4 @@
-# Massa
+# 👌 Massa
 
 [![Gem Version](https://badge.fury.io/rb/massa.svg)](https://rubygems.org/gems/massa)
 [![Build Status](https://travis-ci.org/lucascaton/massa.svg?branch=master)](https://travis-ci.org/lucascaton/massa)
@@ -48,7 +48,7 @@ It's recommended to use `-V` (or `--verbose`) flag when running it in a CI:
 
 ## About the gem name
 
-**"Massa"** is a 🇧🇷 Portuguese slang which means "awesome", so once you add it to your project, it becomes "massa"!
+**"Massa"** is a 🇧🇷 Portuguese slang which means **"awesome"**, so once you add it to your project, it becomes "massa"!
 
 ## Contributing
 
