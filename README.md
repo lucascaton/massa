@@ -12,8 +12,6 @@ This gem helps you to keep its quality, good practices and security.
 
 You can either use only the [default tools](https://github.com/lucascaton/massa/blob/master/config/default_tools.yml) or adding custom ones by using a [simple config file](https://github.com/lucascaton/massa#usage).
 
-## Demo
-
 ![massa](https://raw.githubusercontent.com/lucascaton/massa/master/readme/massa.gif)
 
 Verbose mode:
