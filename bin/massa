@@ -11,6 +11,10 @@ OptionParser.new do |opts|
 
   opts.on('-h', '--help', 'Display this help') do
     puts opts
+    puts
+    puts 'You can read the official documentation here:'
+    puts 'https://github.com/lucascaton/massa#massa'
+    puts
     exit
   end
 
