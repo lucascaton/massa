@@ -4,11 +4,15 @@ module Massa
   class Tool
     class << self
       def list
-        YAML.load_file(tools_yaml_file).map { |tool| OpenStruct.new(tool) }
+        YAML.load_file(config_file_from_gem).merge YAML.load_file(config_file_from_project)
       end
 
-      def tools_yaml_file
-        "#{Gem::Specification.find_by_name('massa').gem_dir}/config/default_tools.yml"
+      def config_file_from_gem
+        File.expand_path('../../../config/default_tools.yml', __FILE__)
+      end
+
+      def config_file_from_project
+        "#{Dir.pwd}/config/massa.yml"
       end
     end
   end

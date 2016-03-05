@@ -9,6 +9,12 @@ options = {}
 OptionParser.new do |opts|
   opts.banner = 'Usage: massa [options]'
 
+  opts.on('-g', '--generate-config', 'Generate config file') do
+    template = File.expand_path('../../lib/massa/templates/massa.yml', __FILE__)
+    FileUtils.cp(template, "#{Dir.pwd}/config/massa.yml")
+    exit
+  end
+
   opts.on('-h', '--help', 'Display this help') do
     puts opts
     puts

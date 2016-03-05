@@ -19,10 +19,10 @@ module Massa
     end
 
     def run!
-      Massa::Tool.list.each do |tool|
-        Massa::CLI.colorize :blue, "➙ #{tool.description}"
+      Massa::Tool.list.each do |gem_name, tool|
+        Massa::CLI.colorize :blue, "➙ #{tool['description']}"
 
-        next unless gem_installed?(tool.gem_name, required: tool.required)
+        next unless gem_installed?(gem_name, required: tool['required'])
 
         execute(tool)
       end
@@ -42,18 +42,18 @@ module Massa
       command_output = ''
 
       if verbose?
-        system(tool.command)
+        system(tool['command'])
       else
-        IO.popen(tool.command, err: [:child, :out]) { |io| command_output = io.read }
+        IO.popen(tool['command'], err: [:child, :out]) { |io| command_output = io.read }
       end
 
       unless $CHILD_STATUS.success?
-        Massa::CLI.colorize :red, "¯\\_(ツ)_/¯ #{tool.description} failed:"
-        Massa::CLI.colorize :yellow, "$ #{tool.command}"
+        Massa::CLI.colorize :red, "¯\\_(ツ)_/¯ #{tool['description']} failed:"
+        Massa::CLI.colorize :yellow, "$ #{tool['command']}"
 
         puts command_output if command_output.to_s != ''
 
-        exit 1 if tool.required
+        exit 1 if tool['required']
       end
     end
   end

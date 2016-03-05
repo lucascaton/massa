@@ -6,6 +6,7 @@ RSpec.describe 'bin/massa' do
       it 'displays massa help' do
         output = `#{File.expand_path('../../../bin/massa', __FILE__)} #{option}`.chomp
         expect(output).to eql("Usage: massa [options]
+    -g, --generate-config            Generate config file
     -h, --help                       Display this help
     -v, --version                    Display version
     -V, --verbose                    Run verbosely

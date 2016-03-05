@@ -34,11 +34,11 @@ And then execute:
 
 ## Usage
 
-Create a configuration file:
+Generate a config file:
 
-    $ ... # TODO
+    $ bundle exec massa -g
 
-Then, run
+Then, run:
 
     $ bundle exec massa
 
