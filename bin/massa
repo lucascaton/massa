@@ -2,6 +2,8 @@
 # frozen_string_literal: true
 
 require 'optparse'
+require 'massa'
+
 $LOAD_PATH.push File.expand_path('../../lib', __FILE__)
 
 options = {}
@@ -10,8 +12,11 @@ OptionParser.new do |opts|
   opts.banner = 'Usage: massa [options]'
 
   opts.on('-g', '--generate-config', 'Generate config file') do
-    template = File.expand_path('../../lib/massa/templates/massa.yml', __FILE__)
-    FileUtils.cp(template, "#{Dir.pwd}/config/massa.yml")
+    template    = File.expand_path('../../lib/massa/templates/massa.yml', __FILE__)
+    config_file = 'config/massa.yml'
+
+    FileUtils.cp(template, "#{Dir.pwd}/config_file")
+    Massa::CLI.colorize :default, 'File generated: ', :green, "#{config_file}\n"
     exit
   end
 
@@ -34,8 +39,6 @@ OptionParser.new do |opts|
     options[:verbose] = v
   end
 end.parse!
-
-require 'massa'
 
 begin
   Massa::Analyzier.run!(options)

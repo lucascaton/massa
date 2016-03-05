@@ -3,8 +3,10 @@
 module Massa
   class CLI
     class << self
-      def colorize(color, string)
-        puts "\n\e[#{code(color)}m#{string}\e[0m\n"
+      def colorize(*args)
+        print "\n"
+        args.each_slice(2) { |color, string| print "\e[#{code(color)}m#{string}\e[0m" }
+        print "\n"
       end
 
       def code(color)
