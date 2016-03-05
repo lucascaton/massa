@@ -1,4 +1,4 @@
-# Default tools (link below) will run by default:
+# You can find the default tools in the following link:
 # https://github.com/lucascaton/massa/blob/master/config/default_tools.yml
 # You can overwrite any tool completely or just change its `require` config to `false`
 
