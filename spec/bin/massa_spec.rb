@@ -8,7 +8,11 @@ RSpec.describe 'bin/massa' do
         expect(output).to eql("Usage: massa [options]
     -h, --help                       Display this help
     -v, --version                    Display version
-    -V, --verbose                    Run verbosely")
+    -V, --verbose                    Run verbosely
+
+You can read the official documentation here:
+https://github.com/lucascaton/massa#massa
+")
       end
     end
   end
