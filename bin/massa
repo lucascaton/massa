@@ -15,7 +15,7 @@ OptionParser.new do |opts|
     template    = File.expand_path('../../lib/massa/templates/massa.yml', __FILE__)
     config_file = 'config/massa.yml'
 
-    FileUtils.cp(template, "#{Dir.pwd}/config_file")
+    FileUtils.cp(template, "#{Dir.pwd}/#{config_file}")
     Massa::CLI.colorize :default, 'File generated: ', :green, "#{config_file}\n"
     exit
   end
