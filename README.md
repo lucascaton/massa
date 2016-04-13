@@ -42,7 +42,7 @@ And then execute:
 
 ## Usage
 
-Generate a config file:
+Generate a config file (optional):
 
     $ bundle exec massa -g
 
