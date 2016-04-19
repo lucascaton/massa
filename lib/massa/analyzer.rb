@@ -19,44 +19,41 @@ module Massa
     end
 
     def run!
-      Massa::Tool.list.each do |gem_name, tool|
-        command = Massa::Command.new(tool)
+      Massa::Tool.list.each do |tool|
+        Massa::CLI.colorize :blue, "➙ #{tool.description}"
 
-        Massa::CLI.colorize :blue, "➙ #{command.description}"
+        next if tool.gem? && !gem_installed?(tool)
 
-        next unless gem_installed?(gem_name, command)
-
-        execute(command)
+        execute(tool)
       end
 
       Massa::CLI.colorize :green, "~(‾▿‾)~ All good!"
     end
 
-    def gem_installed?(name, command)
-      return true unless command.gem?
-      return true if `gem query -i #{name}`.chomp == 'true'
+    def gem_installed?(tool)
+      return true if `gem query -i #{tool.name}`.chomp == 'true'
 
-      Massa::CLI.colorize :yellow, "༼ つ ◕_◕ ༽つ '#{name}' is not installed"
+      Massa::CLI.colorize :yellow, "༼ つ ◕_◕ ༽つ '#{tool.name}' gem is not installed"
 
-      command.required? ? exit(1) : false
+      tool.required? ? exit(1) : false
     end
 
-    def execute(command)
+    def execute(tool)
       command_output = ''
 
       if verbose?
-        system(command.command)
+        system(tool.command)
       else
-        IO.popen(command.command, err: [:child, :out]) { |io| command_output = io.read }
+        IO.popen(tool.command, err: [:child, :out]) { |io| command_output = io.read }
       end
 
       unless $CHILD_STATUS.success?
-        Massa::CLI.colorize :red, "¯\\_(ツ)_/¯ #{command.description} failed:"
-        Massa::CLI.colorize :yellow, "$ #{command.command}"
+        Massa::CLI.colorize :red, "¯\\_(ツ)_/¯ #{tool.description} failed:"
+        Massa::CLI.colorize :yellow, "$ #{tool.command}"
 
         puts command_output if command_output.to_s != ''
 
-        exit 1 if command.required?
+        exit 1 if tool.required?
       end
     end
   end

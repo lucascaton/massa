@@ -2,9 +2,24 @@
 
 module Massa
   class Tool
+    attr_reader :name, :description, :gem, :command, :required
+
+    def initialize(name, attributes)
+      @name        = name
+      @description = attributes['description']
+      @gem         = attributes['gem'].nil? ? true : attributes[:gem]
+      @command     = attributes['command']
+      @required    = attributes['required'].nil? ? true : attributes[:required]
+    end
+
+    alias required? required
+    alias gem?      gem
+
     class << self
       def list
-        custom_tools.empty? ? default_tools : custom_tools
+        tools = custom_tools.any? ? custom_tools : default_tools
+
+        tools.map { |name, attributes| new(name, attributes) }
       end
 
       private
