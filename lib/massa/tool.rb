@@ -4,21 +4,18 @@ module Massa
   class Tool
     class << self
       def list
-        default_tools.each_with_object({}) do |(tool, options), hash|
-          hash[tool] = options.merge(custom_tools[tool] || {})
-          hash
-        end
+        custom_tools.empty? ? default_tools : custom_tools
       end
 
       private
 
       def default_tools
-        YAML.load_file(config_file_from_gem)
+        @default_tools ||= YAML.load_file(config_file_from_gem)
       end
 
       def custom_tools
         # Returns an empty hash if config file is empty
-        YAML.load_file(config_file_from_project) || {}
+        @custom_tools ||= YAML.load_file(config_file_from_project) || {}
 
       # When there is no config file in the project
       rescue Errno::ENOENT
