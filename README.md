@@ -12,13 +12,13 @@ This gem helps you to keep or increase the quality, good practices and security 
 
 Ie.: Instead of:
 
-    $ bundle exec rubocop && bundle exec brakeman -Aqz && bundle exec rails_best_practices && bundle exec rspec && etc
+    $ bundle exec rubocop && bundle exec brakeman -Aqz && bundle exec rails_best_practices && bundle exec rspec && karma start --single-run --browsers PhantomJS && etc
 
 You will only need:
 
     $ bundle exec massa
 
-You can either use only the [default tools](https://github.com/lucascaton/massa/blob/master/config/default_tools.yml) or adding custom ones by using a [simple config file](https://github.com/lucascaton/massa#usage).
+You can either use only the [default tools](https://github.com/lucascaton/massa/blob/master/config/default_tools.yml) or define your own by using a [simple config file](https://github.com/lucascaton/massa#usage).
 
 ![massa](https://raw.githubusercontent.com/lucascaton/massa/master/readme/massa.gif)
 
