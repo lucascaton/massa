@@ -7,9 +7,9 @@ module Massa
     def initialize(name, attributes)
       @name        = name
       @description = attributes['description']
-      @gem         = attributes['gem'].nil? ? true : attributes[:gem]
+      @gem         = attributes['gem'].nil? ? true : attributes['gem']
       @command     = attributes['command']
-      @required    = attributes['required'].nil? ? true : attributes[:required]
+      @required    = attributes['required'].nil? ? true : attributes['required']
     end
 
     alias required? required
