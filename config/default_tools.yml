@@ -5,7 +5,7 @@ rubocop:
 
 brakeman:
   description: 'Brakeman'
-  command:     'bundle exec brakeman -Aqz'
+  command:     'bundle exec brakeman -Aqz4'
   required:    true
 
 rails_best_practices:
