@@ -19,7 +19,7 @@ rails_best_practices:
   required:    true
 
 flay:
-  description: 'Flay (code analyzes for structural similarities)'
+  description: 'Flay (code analyzer for structural similarities)'
   command:     'bundle exec flay .'
   required:    true
 
