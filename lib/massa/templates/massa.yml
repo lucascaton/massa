@@ -27,6 +27,12 @@
 #   command:     'bundle exec i18n-tasks missing'
 #   required:    false
 #
+# es_lint:
+#   description: 'ES lint'
+#   command:     'npm run eslint --ext js .'
+#   gem:         false
+#   required:    true
+#
 # karma:
 #   description: 'Karma (JS specs)'
 #   command:     'karma start --single-run --browsers PhantomJS'
