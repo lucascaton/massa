@@ -7,19 +7,19 @@
 #   command:     'bundle exec rubocop'
 #   required:    true
 #
+# haml_lint:
+#   description: 'HAML lint'
+#   command:     'bundle exec haml-lint app/views'
+#   required:    true
+#
 # brakeman:
-#   description: 'Brakeman'
+#   description: 'Brakeman (security vulnerability scanner)'
 #   command:     'bundle exec brakeman -Aqz4'
 #   required:    true
 #
 # rails_best_practices:
 #   description: 'Rails Best Practices'
 #   command:     'bundle exec rails_best_practices'
-#   required:    true
-#
-# haml_lint:
-#   description: 'HAML lint'
-#   command:     'bundle exec haml-lint app/views'
 #   required:    true
 #
 # i18n-tasks:
