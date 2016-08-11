@@ -27,7 +27,7 @@ module Massa
         execute(tool)
       end
 
-      Massa::CLI.colorize :green, "~(‾▿‾)~ All good!"
+      Massa::CLI.colorize :green, '~(‾▿‾)~ All good!'
     end
 
     def gem_installed?(tool)
