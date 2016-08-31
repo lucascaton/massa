@@ -18,11 +18,6 @@ rails_best_practices:
   command:     'bundle exec rails_best_practices'
   required:    true
 
-flay:
-  description: 'Flay (code analyzer for structural similarities)'
-  command:     'bundle exec flay .'
-  required:    true
-
 i18n-tasks:
   description: 'I18n translations'
   command:     'bundle exec i18n-tasks missing'
