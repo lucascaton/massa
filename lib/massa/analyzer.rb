@@ -47,14 +47,14 @@ module Massa
         IO.popen(tool.command, err: [:child, :out]) { |io| command_output = io.read }
       end
 
-      unless $CHILD_STATUS.success?
-        Massa::CLI.colorize :red, "¯\\_(ツ)_/¯ #{tool.description} failed:"
-        Massa::CLI.colorize :yellow, "$ #{tool.command}"
+      return if $CHILD_STATUS.success?
 
-        puts command_output if command_output.to_s != ''
+      Massa::CLI.colorize :red, "¯\\_(ツ)_/¯ #{tool.description} failed:"
+      Massa::CLI.colorize :yellow, "$ #{tool.command}"
 
-        exit 1 if tool.required?
-      end
+      puts command_output if command_output.to_s != ''
+
+      exit 1 if tool.required?
     end
   end
 end
