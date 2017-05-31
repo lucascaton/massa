@@ -44,7 +44,7 @@ module Massa
       if verbose?
         system(tool.command)
       else
-        IO.popen(tool.command, err: [:child, :out]) { |io| command_output = io.read }
+        IO.popen(tool.command, err: %i[child out]) { |io| command_output = io.read }
       end
 
       return if $CHILD_STATUS.success?
