@@ -24,7 +24,7 @@ GEM
       slop (~> 3.4)
     rainbow (2.2.2)
       rake
-    rake (10.5.0)
+    rake (12.0.0)
     rspec (3.6.0)
       rspec-core (~> 3.6.0)
       rspec-expectations (~> 3.6.0)
@@ -60,12 +60,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.11)
+  bundler
   codeclimate-test-reporter
   massa!
   pry
-  rake (~> 10.0)
-  rspec (~> 3.4)
+  rake
+  rspec
   rubocop
   rubocop-rspec
 
