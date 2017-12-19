@@ -4,10 +4,6 @@ AllCops:
   TargetRubyVersion: 2.3
   DisplayCopNames: true
 
-  Exclude:
-    # FIXME: Remove lines below when https://github.com/nevir/rubocop-rspec/issues/62 is fixed
-    - 'spec/**/*'
-
 Metrics/LineLength:
   Max: 100
 
@@ -17,9 +13,16 @@ Metrics/MethodLength:
 Style/Documentation:
   Enabled: false
 
+Layout/EmptyLinesAroundArguments:
+  Enabled: false
+
 RSpec/DescribeClass:
   Exclude:
-    - 'spec/bin/**/*'
+    - spec/bin/**/*
+
+RSpec/ExampleLength:
+  Exclude:
+    - spec/bin/**/*
 
 Metrics/AbcSize:
   Max: 25
