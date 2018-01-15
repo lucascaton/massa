@@ -27,7 +27,7 @@ GEM
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
       rspec-mocks (~> 3.7.0)
-    rspec-core (3.7.0)
+    rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -36,15 +36,15 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.0)
-    rubocop (0.52.0)
+    rubocop (0.52.1)
       parallel (~> 1.10)
       parser (>= 2.4.0.2, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    rubocop-rspec (1.21.0)
-      rubocop (>= 0.52.0)
+    rubocop-rspec (1.22.0)
+      rubocop (>= 0.52.1)
     ruby-progressbar (1.9.0)
     simplecov (0.13.0)
       docile (~> 1.1.0)
@@ -67,4 +67,4 @@ DEPENDENCIES
   rubocop-rspec
 
 BUNDLED WITH
-   1.16.0
+   1.16.1
