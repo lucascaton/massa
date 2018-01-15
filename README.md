@@ -69,4 +69,4 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 ## Copyright
 
-Copyright (c) 2017 Lucas Caton.
+Copyright (c) 2018 Lucas Caton.
