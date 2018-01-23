@@ -6,7 +6,7 @@
 [![Test Coverage](https://codeclimate.com/github/lucascaton/massa/badges/coverage.svg)](https://codeclimate.com/github/lucascaton/massa/coverage)
 [![Code Climate](https://codeclimate.com/github/lucascaton/massa/badges/gpa.svg)](https://codeclimate.com/github/lucascaton/massa)
 
-It's not rare to have Ruby (and Rails) projects becomming hard to maintain and less fun after a while.
+It's not rare to have Ruby (and Rails) projects becoming hard to maintain and less fun after a while.
 This gem helps you to keep or increase the quality, good practices and security of your projects.
 
 **Massa** can run in your CI using different code analyzers tools along with automated tests, instead of running only your automated tests.
