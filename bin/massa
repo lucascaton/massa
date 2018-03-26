@@ -4,7 +4,7 @@
 require 'optparse'
 require 'massa'
 
-$LOAD_PATH.push File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.push File.expand_path('../lib', __dir__)
 
 options = {}
 
@@ -12,7 +12,7 @@ OptionParser.new do |opts|
   opts.banner = 'Usage: massa [options]'
 
   opts.on('-g', '--generate-config', 'Generate config file') do
-    template    = File.expand_path('../../lib/massa/templates/massa.yml', __FILE__)
+    template    = File.expand_path('../lib/massa/templates/massa.yml', __dir__)
     config_file = 'config/massa.yml'
 
     FileUtils.mkdir_p(File.dirname(config_file))

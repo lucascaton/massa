@@ -38,7 +38,7 @@ module Massa
       end
 
       def config_file_from_gem
-        File.expand_path('../../../config/default_tools.yml', __FILE__)
+        File.expand_path('../../config/default_tools.yml', __dir__)
       end
 
       def config_file_from_project

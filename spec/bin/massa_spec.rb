@@ -6,7 +6,7 @@ RSpec.describe 'bin/massa' do
   %w[-h --help].each do |option|
     describe(option) do
       it 'displays massa help' do
-        output = `#{File.expand_path('../../../bin/massa', __FILE__)} #{option}`.chomp
+        output = `#{File.expand_path('../../bin/massa', __dir__)} #{option}`.chomp
         expect(output).to eql("Usage: massa [options]
     -g, --generate-config            Generate config file
     -h, --help                       Display this help
@@ -23,7 +23,7 @@ https://github.com/lucascaton/massa#massa
   %w[-v --version].each do |option|
     describe(option) do
       it 'displays massa version' do
-        output = `#{File.expand_path('../../../bin/massa', __FILE__)} #{option}`.chomp
+        output = `#{File.expand_path('../../bin/massa', __dir__)} #{option}`.chomp
         expect(output).to eql(Massa::VERSION)
       end
     end
