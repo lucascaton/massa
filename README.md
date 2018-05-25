@@ -47,6 +47,8 @@ Generate a config file (optional):
 
     $ bundle exec massa -g
 
+This will generate a `config/massa.yml` file, which you can customize.
+
 Then, run:
 
     $ bundle exec massa
