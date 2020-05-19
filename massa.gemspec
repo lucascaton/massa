@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Keep the quality, good practices and security of Rails projects.'
   spec.description   = 'Keep the quality, good practices and security of Rails projects.'
-  spec.homepage      = 'http://github.com/lucascaton/massa'
+  spec.homepage      = 'https://github.com/lucascaton/massa'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(readme|spec)/}) }
