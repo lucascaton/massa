@@ -8,6 +8,7 @@ require 'English'
 module Massa
   class Analyzier
     attr_reader :verbose
+
     alias verbose? verbose
 
     def self.run!(options)
