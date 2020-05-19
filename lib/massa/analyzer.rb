@@ -11,7 +11,7 @@ module Massa
     alias verbose? verbose
 
     def self.run!(options)
-      new(options).run!
+      new(**options).run!
     end
 
     def initialize(verbose: false)
