@@ -20,7 +20,7 @@ module Massa
     end
 
     def run!
-      Massa::Tool.list.each do |tool|
+      Massa::Tool.list.select(&:enabled?).each do |tool|
         Massa::CLI.colorize :blue, "➙ #{tool.description}"
 
         next if tool.gem? && !gem_installed?(tool)
