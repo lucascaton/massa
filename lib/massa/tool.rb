@@ -2,7 +2,7 @@
 
 module Massa
   class Tool
-    attr_reader :name, :description, :gem, :command, :required
+    attr_reader :name, :description, :gem, :command, :required, :enabled
 
     def initialize(name, attributes)
       @name        = name
@@ -10,10 +10,12 @@ module Massa
       @gem         = attributes['gem'].nil? ? true : attributes['gem']
       @command     = attributes['command']
       @required    = attributes['required'].nil? ? true : attributes['required']
+      @enabled     = attributes['enabled'].nil? ? true : attributes['enabled']
     end
 
-    alias required? required
+    alias enabled?  enabled
     alias gem?      gem
+    alias required? required
 
     class << self
       def list
