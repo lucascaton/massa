@@ -1,3 +1,12 @@
+# Massa has been retired 🌅
+
+Check out [this blog](https://www.lucascaton.com/2024/05/22/how-to-automatically-run-automated-tests-and-code-analyzers-via-git-hooks)
+post for a better replacement.
+
+---
+---
+---
+
 # 👌 Massa
 
 [![Gem Version](https://badge.fury.io/rb/massa.svg)](https://rubygems.org/gems/massa)
