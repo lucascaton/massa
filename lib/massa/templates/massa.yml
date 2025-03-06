@@ -1,5 +1,5 @@
 # By leaving this file empty, massa will run all default tools. You can check them here:
-# https://github.com/lucascaton/massa/blob/master/config/default_tools.yml
+# https://github.com/lucascaton/massa/blob/main/config/default_tools.yml
 # Otherwise you can define your own tools like in the following examples:
 
 # rubocop:

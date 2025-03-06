@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/massa.svg)](https://rubygems.org/gems/massa)
 [![Dependency Status](https://gemnasium.com/badges/github.com/lucascaton/massa.svg)](https://gemnasium.com/github.com/lucascaton/massa)
-[![Build Status](https://travis-ci.org/lucascaton/massa.svg?branch=master)](https://travis-ci.org/lucascaton/massa)
+[![Build Status](https://travis-ci.org/lucascaton/massa.svg?branch=main)](https://travis-ci.org/lucascaton/massa)
 [![Test Coverage](https://codeclimate.com/github/lucascaton/massa/badges/coverage.svg)](https://codeclimate.com/github/lucascaton/massa/coverage)
 [![Code Climate](https://codeclimate.com/github/lucascaton/massa/badges/gpa.svg)](https://codeclimate.com/github/lucascaton/massa)
 
@@ -19,13 +19,13 @@ You will only need:
 
     $ bundle exec massa
 
-You can either use only the [default tools](https://github.com/lucascaton/massa/blob/master/config/default_tools.yml) or define your own by using a [simple config file](https://github.com/lucascaton/massa#usage).
+You can either use only the [default tools](https://github.com/lucascaton/massa/blob/main/config/default_tools.yml) or define your own by using a [simple config file](https://github.com/lucascaton/massa#usage).
 
-![massa](https://raw.githubusercontent.com/lucascaton/massa/master/readme/massa.gif)
+![massa](https://raw.githubusercontent.com/lucascaton/massa/main/readme/massa.gif)
 
 Verbose mode:
 
-![massa-v](https://raw.githubusercontent.com/lucascaton/massa/master/readme/massa-v.gif)
+![massa-v](https://raw.githubusercontent.com/lucascaton/massa/main/readme/massa-v.gif)
 
 ## Installation
 
